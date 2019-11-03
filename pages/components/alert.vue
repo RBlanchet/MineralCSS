@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid wrapper">
+  <div class="container-fluid">
     <h1>Alertes</h1>
     <h2>Sans icônes</h2>
     <div class="row">
@@ -37,6 +37,6 @@
         alert('Alerte se ferme.');
       }
     },
-    transition: 'slide-left',
+    transition: 'slide-down',
   }
 </script>

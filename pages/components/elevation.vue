@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid wrapper">
+  <div class="container-fluid">
     <h1>Elevations</h1>
     <div class="row">
       <div class="col-md-12 p-5 mt-5 elevation">elevation</div>
@@ -17,6 +17,6 @@
 <script>
   export default {
     name: "elevation",
-    transition: 'slide-left',
+    transition: 'slide-down',
   }
 </script>

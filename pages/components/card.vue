@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid wrapper">
+  <div class="container-fluid">
     <h1>Cards</h1>
     <div class="row">
       <div class="col-md-6">
@@ -24,15 +24,38 @@
         <Card class="elevation-xl" color="red"/>
       </div>
     </div>
+    <h2>Avec pied de page</h2>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <Card class="elevation-xl" color="blue">
+          <template v-slot:footer>
+            <div class="row w-100 flex justify-content-end">
+              <Button/>
+            </div>
+          </template>
+        </Card>
+      </div>
+      <div class="col-md-6">
+        <Card class="elevation-xl">
+          <template v-slot:footer>
+            <div class="row w-100 flex justify-content-end">
+              <Button type="flat" color="blue" content="J'aime !" icon="thumb_up" rounded/>
+              <Button type="flat" color="red" content="J'aime pas !" icon="thumb_down" rounded/>
+            </div>
+          </template>
+        </Card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   import Card from "../../components/Card";
+  import Button from "../../components/Button";
 
   export default {
     name: "card",
-    components: {Card},
-    transition: 'slide-left',
+    components: {Card, Button},
+    transition: 'slide-down',
   }
 </script>

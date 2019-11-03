@@ -1,0 +1,133 @@
+.sidebar {
+  background-color: $blue;
+  height: 100vh;
+  width: $sidebar-width;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  &__logo {
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      cursor: pointer;
+      max-height: 50px;
+    }
+    span {
+      margin-left: 25px;
+      color: #FFF;
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $grey;
+    padding: 25px 0 25px 25px;
+    transition: .3s ease-in-out;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+    &.toggle {
+      cursor: pointer;
+      padding: 25px 0 25px 25px !important;
+      margin: 0;
+      &.active {
+        background: none;
+        &:after {
+          transform: rotate(0deg);
+        }
+      }
+      &:after {
+        transition: transform .3s ease-in-out;
+        @extend .material-icons;
+        content: 'keyboard_arrow_down';
+        color: $grey;
+        position: absolute;
+        right: 25px;
+        transform: rotate(90deg);
+      }
+    }
+    &.router-link-exact-active {
+      @extend .sidebar__item;
+      color: $white;
+      background: $blue;
+      border-bottom-left-radius: 35px;
+      border-top-left-radius: 35px;
+    }
+    &:hover {
+      transition: .3s ease-in-out;
+      color: $white;
+    }
+    i {
+      margin-right: 15px;
+      font-size: 18px;
+    }
+  }
+  &__toggle {
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    &.active {
+      background: $darkBlue;
+    }
+    & > .router-link-active {
+      color: $white;
+    }
+    &--content {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height .5s ease-in-out;
+      &.force {
+        max-height: max-content;
+      }
+      & > .sidebar__item {
+        padding: 10px 0 10px 25px;
+        font-weight: 100;
+        margin: 0;
+        &:last-child {
+          padding-bottom: 25px;
+        }
+        &.router-link-exact-active {
+          background: none;
+        }
+      }
+    }
+  }
+  &__group {
+    margin: 0 0 0 25px;
+  }
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+  }
+  &__profile {
+    padding: 10px;
+    margin: 25px;
+    border-radius: 10px;
+    background: $blue;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    &:hover {
+      background: $darkBlue;
+      transition: .3s ease-in-out;
+    }
+    &--image {
+      height: auto;
+      width: 50px;
+      border-radius: 50%;
+      margin: 0 15px 0 0px;
+    }
+    &--text {
+      color: $white;
+      font-weight: 100;
+      font-size: 13px;
+    }
+  }
+}

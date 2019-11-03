@@ -1,0 +1,15 @@
+.rounded {
+  border-radius: .25rem;
+  &__none {
+    border-radius: 0;
+  }
+  &__sm {
+    border-radius: .125rem;
+  }
+  &__lg {
+    border-radius: .5rem;
+  }
+  &__full {
+    border-radius: 9999px;
+  }
+}

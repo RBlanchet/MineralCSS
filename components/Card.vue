@@ -6,7 +6,13 @@
     </div>
     <div class="card__wrapper">
       <h2 class="card__wrapper--title">{{ title }}</h2>
-      <article class="card__wrapper--content">{{ content }}</article>
+      <article class="card__wrapper--content">
+        {{ content }}
+        <slot name="content"></slot>
+      </article>
+      <div class="card__wrapper--footer">
+        <slot name="footer"></slot>
+      </div>
     </div>
   </div>
 </template>

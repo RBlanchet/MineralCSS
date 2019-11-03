@@ -7,10 +7,10 @@
     align-items: center;
   }
   &-end {
-    align-items: end;
+    align-items: flex-end;
   }
   &-start {
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
@@ -19,9 +19,9 @@
     justify-content: center;
   }
   &-end {
-    justify-content: end;
+    justify-content: flex-end;
   }
   &-start {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }

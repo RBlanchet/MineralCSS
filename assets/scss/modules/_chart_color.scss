@@ -1,22 +1,36 @@
 .green {
   background: $green;
+  &__text {
+    color: $green;
+  }
 }
 
 .red {
   background: $red;
+  &__text {
+    color: $red;
+  }
 }
 
 .blue {
   background: $blue;
+  &__text {
+    color: $blue;
+  }
 }
 
 .orange {
   background: $orange;
+  &__text {
+    color: $orange;
+  }
 }
 
 .grey {
   background: $grey;
-  color: $fontColor !important;
+  &__text {
+    color: $grey;
+  }
 }
 
 .white {

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid full-width">
     <div>
       <Logo/>
       <h1 class="title">
@@ -19,13 +19,12 @@ export default {
   components: {
     Logo
   },
-  transition: 'slide-left',
+  transition: 'slide-down',
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
+.full-width {
   min-height: 90vh;
   display: flex;
   justify-content: center;
