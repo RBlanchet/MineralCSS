@@ -1,0 +1,21 @@
+{
+  "name": "CSSFramework",
+  "version": "1.0.0",
+  "description": "My perfect Nuxt.js project",
+  "author": "BLANCHET Romain",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}
